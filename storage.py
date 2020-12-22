@@ -16,10 +16,7 @@ def read():
     humidity, temperature = Adafruit_DHT.read_retry(config['sensor']['type'], config['sensor']['pin'])
     return ( humidity, temperature = Adafruit_DHT )
 
-def writeToDB(humidity, temperature):
-    value = humidity, temperature
-    cursor.execute(insertSQL, value)
-    connection.commit()
+
     
     
        
